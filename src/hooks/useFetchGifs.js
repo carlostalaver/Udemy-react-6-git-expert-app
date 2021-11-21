@@ -13,6 +13,8 @@ export const useFetchGifs = (category) => {
     useEffect(() => { // el call back del useEffect NO PUEDE USAR  la palabra async
         getGifs(category)
             .then( imgs => {
+
+                console.log('Buscando ', category);
                 setState({
                     data: imgs,
                     loading: false

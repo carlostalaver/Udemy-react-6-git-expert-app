@@ -9,7 +9,7 @@ export const GifGrid = ({category}) => {
        // const [images, setImages] = useState([]);
 
         /*UseEffect es usado para ejecutar bloques de codigo de manera condicionada
-        el primer parametro es una funcion, y el 2do una lista de dependencies, si se le pasa el 2do parametro
+        el primer parametro es una funcion, y el 2do una lista de dependencies, si se le pasa el 2do parametro [] vacio,
         significa que el codigo que está dentro del useEffect se ejecutara una sola vez despues de que react haya
         renderizado el componente. Nota los useEffect NO PUEDEN SER ASYNC*/
 /*         useEffect(() => {

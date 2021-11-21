@@ -12,7 +12,9 @@ export const AddCategory = ({setCategories}) => { // setCategories es una refere
     const handleSubmit = (e) => {
         e.preventDefault();
         if(inputValue.trim().length > 2){
-            setCategories(cats => [ inputValue, ...cats ]); // el argumento de setCategories es una funcion ya que no le estoy pasando el estado al component AddCategory, de esta manera puedo tener acceso a su referencia
+            // el argumento de setCategories es una funcion ya que no le estoy pasando el 
+            // estado al component AddCategory, de esta manera puedo tener acceso a su referencia
+            setCategories(cats => [ inputValue, ...cats ]); 
             setInputValue('');
         }
     }

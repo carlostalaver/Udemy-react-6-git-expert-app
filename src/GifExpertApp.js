@@ -16,12 +16,19 @@ export const GifExpertApp = () => {
             <h2> GifExpertApp </h2>
             {/*  notar que le estoy pasando la referencia de setCategories al componente HIJO */}
             <AddCategory setCategories = { setCategories }/> 
+
+           {/*  Esta seria una nueva forma de llamar al componente AddCategory */}
+            {/* <AddCategory
+                setCategories={(categories) => {
+                    setCategories(categories);
+                }}
+            /> */}
             <hr/>
             <ol>
                 {
                     categories.map((category) => ( // no se puede usar un for porque no es una expresion de js que retorne un valor
                         <GifGrid   // notar que no estoy usando un return xq uso un ( ) para sustituirlo
-                            key={category}  // se le asigna un key porque estoy iterando el componenete GifGrid
+                            key={ category }  // se le asigna un key porque estoy iterando el componenete GifGrid
                             category= { category }
                         />
                     ))
