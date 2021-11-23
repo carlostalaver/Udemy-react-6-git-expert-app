@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { PropTypes } from 'prop-types';
 import { getGifs } from '../helpers/getGif';
 import { useFetchGifs } from '../hooks/useFetchGifs';
 import { GifGridItem } from './GifGridItem';
@@ -23,7 +24,7 @@ export const GifGrid = ({category}) => {
     //#region trabajando con hook personalizados
         const {data:images, loading} = useFetchGifs(category);
 
-        console.log(images);
+        console.log('images ', images)
     //#endregion
 
     return (
@@ -42,4 +43,9 @@ export const GifGrid = ({category}) => {
             </div>
         </>
     )
+}
+
+
+GifGrid.propTypes = {
+    category: PropTypes.string.isRequired
 }

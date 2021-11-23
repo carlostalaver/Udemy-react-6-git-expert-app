@@ -5,13 +5,16 @@ export const AddCategory = ({setCategories}) => { // setCategories es una refere
     const [inputValue, setInputValue,] = useState('');
 
     const handleInputChange = (e) => {
+
         setInputValue(e.target.value);
     };
 
     // esta función se dispara al presionar la tecla enter
     const handleSubmit = (e) => {
         e.preventDefault();
+
         if(inputValue.trim().length > 2){
+
             // el argumento de setCategories es una funcion ya que no le estoy pasando el 
             // estado al component AddCategory, de esta manera puedo tener acceso a su referencia
             setCategories(cats => [ inputValue, ...cats ]); 
@@ -21,6 +24,8 @@ export const AddCategory = ({setCategories}) => { // setCategories es una refere
 
     return (
         <form onSubmit={ handleSubmit }>
+            <p> { inputValue } </p>
+
             <input 
                 type="text"
                 value= {inputValue}
